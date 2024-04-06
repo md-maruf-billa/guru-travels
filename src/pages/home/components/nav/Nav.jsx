@@ -1,13 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../../assets/images/icons/logo.png'
 
 const Nav = () => {
 
     const navBtn = <>
-        <li><NavLink to={"/"}>News</NavLink></li>
+        <li><NavLink to={"/"}>Home</NavLink></li>
         <li><NavLink to={"/designation"}>Destination</NavLink></li>
-        <li><NavLink to={"blogs"}>Blogs</NavLink></li>
+        <li><NavLink to={"/blogs"}>Blogs</NavLink></li>
         <li><NavLink to={"/contact"}>Contact</NavLink></li>
     </>
 
@@ -30,7 +30,7 @@ const Nav = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="px-7 py-3 border-none font-semibold  btn bg-[#F9A51A]">Login</button>
+                <Link to={"/login"} className="px-7 py-3 border-none font-semibold  btn bg-[#F9A51A]">Login</Link>
             </div>
         </div>
     );
